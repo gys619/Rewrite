@@ -1,6 +1,6 @@
 # QX
 自用quanx去广告重写规则
-## 7️⃣特别感谢：
+## 7️特别感谢：
 
 以下排名不分先后
 [@ddgksf2013](https://github.com/ddgksf2013)
