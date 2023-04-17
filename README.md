@@ -1,6 +1,13 @@
-# QX
-自用quanx去广告&vip
-## 7️特别感谢：
+# 自用loon
+# quanx 推荐 [墨鱼](https://github.com/ddgksf2013)
+
+loon最近教程：https://coffee-elderberry-22b.notion.site/Loon-71747252d5054551a8cd10924064899c
+
+官方文档：http://docs.nsloon.com
+
+插件大全：https://getupnote.com/share/notes/zSn1ShBmzNYISKcTgjXE5oHMrNf2/4a3b6152-3dd3-46da-b479-8c30ef6ef8d1
+
+## 7特别感谢：
 
 以下排名不分先后
 [@ddgksf2013](https://github.com/ddgksf2013)
