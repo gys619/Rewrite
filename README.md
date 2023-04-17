@@ -1,5 +1,7 @@
 # 自用loon
 # quanx 推荐 [墨鱼](https://github.com/ddgksf2013)
+说明:
+loon.conf 插件部分用的quanx重写, 配置里带了qx转loon插件, 导入配置后需刷新一下插件
 
 loon最近教程：https://coffee-elderberry-22b.notion.site/Loon-71747252d5054551a8cd10924064899c
 
