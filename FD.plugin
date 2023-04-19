@@ -1,13 +1,13 @@
-#!name=樊登读书 
-#!desc=解锁樊登讲书+非凡精读+李蕾阅读+付费课程
-#!openUrl=https://github.com/Gnuyoah/Rewrite
-
-[MITM]
-hostname =*dushu*
+#!name= 樊登
+#!desc= 樊登读书 樊登讲书+非凡精读+李蕾阅读+付费课程
+#!author= 伟人
+#!homepage= https://t.me/WeiRenOvO
+#!icon= https://raw.githubusercontent.com/sE7En0908/Loon/master/icon/fd.png
 
 [Script]
-http-response ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js, requires-body=true, timeout=10, tag=FD
-http-response ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FDTK.js, requires-body=true, timeout=10, tag=FDTK
-
-[Rule]
-URL-REGEX,^http[s]?:\/\/.*dushu365\.com\/resource-orchestration-system\/play\/duration,REJECT
+http-request ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js, requires-body=true, timeout=10, tag=樊登读书
+http-request ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FDTK.js, requires-body=true, timeout=10, tag=樊登读书TK
+[Rewrite]
+^http[s]?:\/\/.*dushu365\.com\/resource-orchestration-system\/play\/duration reject-200
+[MITM]
+hostname = *dushu*
