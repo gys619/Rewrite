@@ -1,0 +1,15 @@
+#!name=樊登读书 
+#!desc=解锁樊登讲书+非凡精读+李蕾阅读+付费课程
+#!openUrl=https://github.com/Gnuyoah/Rewrite
+
+[Mitm]
+hostname =*dushu*
+
+[Script]
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true,  timeout=10, tag=spotifyProto
+
+http-response ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js, requires-body=true, timeout=10, tag=FD
+http-response ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FDTK.js, requires-body=true, timeout=10, tag=FDTK
+
+[Rule]
+URL-REGEX ^http[s]?:\/\/.*dushu365\.com\/resource-orchestration-system\/play\/duration,REJECT
