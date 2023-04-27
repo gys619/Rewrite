@@ -15,4 +15,4 @@ http-request ^https:\/\/auth\.aliyundrive.com\/v2\/account\/token script-path=ht
 
 
 [MITM]
-hostname = api.kkmh.com,sytgate.jslife.com.cn,passport.iqiyi.com,auth.aliyundrive.com
+hostname = api.kkmh.com,sytgate.jslife.com.cn,passport.iqiyi.com,auth.aliyundrive.com,app.bilibili.com, m.bilibili.com
