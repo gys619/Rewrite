@@ -1,0 +1,22 @@
+#!name = 自用获取cookie
+#!desc = 快看漫画,捷停车,阿里云盘,爱奇艺
+#!author =gys
+
+[Rule]
+DOMAIN, api.kkmh.com, DIRECT
+DOMAIN, sytgate.jslife.com.cn, DIRECT
+DOMAIN, passport.iqiyi.com, DIRECT
+DOMAIN, auth.aliyundrive.com, DIRECT
+
+
+[Script]
+# 快看漫画
+http-request ^https:\/\/api\.kkmh\.com\/v\d\/passport\/user script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, timeout=10, tag=KKMH.js
+http-request ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, requires-body=true, timeout=10, tag=获取捷停车userId
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=10, enabled=false, tag=iQIYI.js
+
+http-request ^https:\/\/auth\.aliyundrive.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, timeout=10, enabled=false, tag=阿里云盘获取Cookie
+
+
+[MITM]
+hostname = api.kkmh.com,sytgate.jslife.com.cn,passport.iqiyi.com,auth.aliyundrive.com
