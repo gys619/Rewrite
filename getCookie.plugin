@@ -3,10 +3,10 @@
 #!author =gys
 
 [Rule]
-DOMAIN, api.kkmh.com, DIRECT
-DOMAIN, sytgate.jslife.com.cn, DIRECT
-DOMAIN, passport.iqiyi.com, DIRECT
-DOMAIN, auth.aliyundrive.com, DIRECT
+DOMAIN, api.kkmh.com, PROXY
+DOMAIN, sytgate.jslife.com.cn, PROXY
+DOMAIN, passport.iqiyi.com, PROXY
+DOMAIN, auth.aliyundrive.com, PROXY
 
 
 [Script]
