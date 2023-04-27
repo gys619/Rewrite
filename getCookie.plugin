@@ -2,21 +2,9 @@
 #!desc = 快看漫画,捷停车,阿里云盘,爱奇艺
 #!author =gys
 
-[Rule]
-DOMAIN, api.kkmh.com, PROXY
-DOMAIN, sytgate.jslife.com.cn, PROXY
-DOMAIN, passport.iqiyi.com, PROXY
-DOMAIN, auth.aliyundrive.com, PROXY
-
 
 [Script]
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, timeout=300, tag=快看漫画, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KuaiKan.png
-cron "0 8,9 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, timeout=300, tag=捷停车
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout=300, tag=哔哩哔哩
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=300, tag=爱奇艺
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, timeout=300, tag=阿里云
 
-# 快看漫画
 http-request ^https:\/\/api\.kkmh\.com\/v\d\/passport\/user script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, timeout=10, tag=KKMH.js
 http-request ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, requires-body=true, timeout=10, tag=获取捷停车userId
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=10, enabled=false, tag=iQIYI.js
