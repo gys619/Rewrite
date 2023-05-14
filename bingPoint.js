@@ -125,23 +125,23 @@ if(!lk.isExecComm) {
     }
 }
 
-function getCookie() {
-    if (lk.isGetCookie(/\/rewards\.bing\.com/)) {
-        lk.log(`开始获取cookie`)
-        try {
-            const bingHeader = JSON.stringify($request.headers.cookie)
-            if (!!bingHeader) {
-                lk.setVal(bingPointCookieKey, bingHeader)
-                lk.appendNotifyInfo('🎉成功获取cookie，可以关闭相应脚本')
-            }
-        } catch (e) {
-            lk.execFail()
-            lk.appendNotifyInfo('❌获取bing cookie失败')
-        }
-    }
-    lk.msg(``)
-    lk.done()
-}
+// function getCookie() {
+//     if (lk.isGetCookie(/\/rewards\.bing\.com/)) {
+//         lk.log(`开始获取cookie`)
+//         try {
+//             const bingHeader = JSON.stringify($request.headers.cookie)
+//             if (!!bingHeader) {
+//                 lk.setVal(bingPointCookieKey, bingHeader)
+//                 lk.appendNotifyInfo('🎉成功获取cookie，可以关闭相应脚本')
+//             }
+//         } catch (e) {
+//             lk.execFail()
+//             lk.appendNotifyInfo('❌获取bing cookie失败')
+//         }
+//     }
+//     lk.msg(``)
+//     lk.done()
+// }
 
 async function dealMsg(dashBoard, newPoint) {
     return new Promise((resolve, _reject) => {
