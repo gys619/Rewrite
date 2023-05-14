@@ -169,10 +169,10 @@ async function all() {
         return
     }
     let msg = ``
-//     if (bingPointCookie == '') {
-//         lk.execFail()
-//         lk.appendNotifyInfo(`⚠️请先打开rewards.bing.com获取cookie`)
-//     } else {
+    if (bingPointCookie == '') {
+        lk.execFail()
+        lk.appendNotifyInfo(`⚠️请先打开rewards.bing.com获取cookie`)
+    } else {
         bingPointHeader = {}
         bingPointHeader["authority"] = 'rewards.bing.com'
         bingPointHeader["accept"] = 'application/json, text/javascript, */*; q=0.01'
@@ -215,7 +215,7 @@ async function all() {
     }
     lk.msg(msg)
     lk.done()
-// }
+}
 
 function doReportActForQuiz(title, item, rvt) {
     return new Promise((resolve, _reject) => {
