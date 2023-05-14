@@ -215,7 +215,7 @@ async function all() {
     }
     lk.msg(msg)
     lk.done()
-}
+// }
 
 function doReportActForQuiz(title, item, rvt) {
     return new Promise((resolve, _reject) => {
