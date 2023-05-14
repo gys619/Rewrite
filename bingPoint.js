@@ -125,7 +125,7 @@ if(!lk.isExecComm) {
     }
 }
 
-// function getCookie() {
+function getCookie() {
 //     if (lk.isGetCookie(/\/rewards\.bing\.com/)) {
 //         lk.log(`开始获取cookie`)
 //         try {
@@ -139,9 +139,11 @@ if(!lk.isExecComm) {
 //             lk.appendNotifyInfo('❌获取bing cookie失败')
 //         }
 //     }
-//     lk.msg(``)
-//     lk.done()
-// }
+     lk.setVal(bingPointCookieKey, bingHeader)
+                lk.appendNotifyInfo('🎉成功获取cookie，可以关闭相应脚本')
+    lk.msg(``)
+    lk.done()
+}
 
 async function dealMsg(dashBoard, newPoint) {
     return new Promise((resolve, _reject) => {
@@ -169,7 +171,7 @@ async function all() {
         return
     }
     let msg = ``
-    if (bingPointCookie == '') {
+    if (bingPointCookie == '1') {
         lk.execFail()
         lk.appendNotifyInfo(`⚠️请先打开rewards.bing.com获取cookie`)
     } else {
