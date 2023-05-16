@@ -12,6 +12,7 @@ http-request ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pa
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=10, enabled=true, tag=爱奇艺获取cookie
 
 http-request ^https:\/\/auth\.aliyundrive.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, timeout=10, enabled=true, tag=阿里云盘获取Cookie
+http-request ^https:\/\/auth\.aliyundrive.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, requires-body=true, timeout=10, enabled=true, tag=阿里云盘获取Cookie2
 
 
 [MITM]
