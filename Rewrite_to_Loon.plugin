@@ -13,13 +13,13 @@ DOMAIN,gitlab.com,PROXY
 DOMAIN,hub.nan.ge,PROXY
 
 [Script]
-http-request \/[^/]+\.[^/]+qx$|qx\?(jsc|hnadd|hndel|n|y|x|del|i)= script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/RewriteQuantumultX.js, requires-body=true, timeout=60, tag = 转写Quantumult X重写
+http-request \/[^/]+\.[^/]+qx$|qx\?(jsc|hnadd|hndel|n|y|x|del|i)= script-path = https://raw.githubusercontent.com/Gnuyoah/Rewrite/main/RewriteQuantumultX.js, requires-body=true, timeout=10, tag = 转写Quantumult X重写
 
-http-request \/[^/]+\.[^/]+sg$|sg\?(jsc|hnadd|hndel|n|y|x|del|i)= script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/RewriteSurge.js, requires-body=true, timeout=60, tag = 转写Surge模块
+http-request \/[^/]+\.[^/]+sg$|sg\?(jsc|hnadd|hndel|n|y|x|del|i)= script-path =https://raw.githubusercontent.com/Gnuyoah/Rewrite/main/RewriteSurge.js, requires-body=true, timeout=10, tag = 转写Surge模块
 
-http-request r_parser.list$|r_parser.list\?.* script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/Rule_converter.js, requires-body=true, timeout=60, tag = 规则转换
+http-request r_parser.list$|r_parser.list\?.* script-path = https://raw.githubusercontent.com/Gnuyoah/Rewrite/main/Rule_converter.js, requires-body=true, timeout=10, tag = 规则转换
 
-http-request _script-converter-(stash|surge|loon|shadowrocket)\.js$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/JavaScript_converter.js, timeout=60, requires-body=true, tag = 脚本转换
+http-request _script-converter-(stash|surge|loon|shadowrocket)\.js$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/JavaScript_converter.js, timeout=10, requires-body=true, tag = 脚本转换
 
 [MITM]
 hostname = github.com, raw.githubusercontent.com, gist.githubusercontent.com, gitlab.com
