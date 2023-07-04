@@ -1,0 +1,30 @@
+#!name=腾讯视频开屏
+#!desc=去除,视频广告@小白脸
+
+
+[Rule]
+AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
+
+# > 腾讯开屏
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+
+# > 开屏
+[Map Local]
+^http:\/\/(.+qqvideo\.tc\.qq\.com\/.+mp4|pgdt\.gtimg\.cn)  data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+[Rule]
+DOMAIN-SUFFIX,iacc.stgw.qq.com,REJECT
+DOMAIN,yoo.gtimg.com,REJECT 
+IP-CIDR,119.167.131.243/32,REJECT,no-resolve
+DOMAIN,vi.bls.mdt.qq.com,REJECT 
+DOMAIN,otheve.beacon.qq.com,REJECT
+DOMAIN,pay.video.qq.com,REJECT
+URL-REGEX,^http:\/\/yoo\.gtimg\.com\/huoguo\/publisher\/e\/563c344cd75c864bf8bfaa6162aa7d14\.zip$,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT // 腾讯广告域名
+
+[Script]
+腾讯 = type=http-request,pattern=^(https:\/\/i\.video|http:\/\/iacc)\.qq\.com\/$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/gys619/Rewrite/main/Tx.js
+
+
+[MITM]
+hostname = %APPEND% i.video.qq.com,iacc.qq.com
