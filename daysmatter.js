@@ -43,7 +43,7 @@ function dateDiff(startDate, endDate) {
 
 const dayarr = [ 
     [ "在一起", "2023-07-24" ]
-
+］
 day();
 
 function day() {
